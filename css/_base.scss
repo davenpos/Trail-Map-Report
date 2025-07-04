@@ -1,0 +1,25 @@
+$deepBlue: rgb(54, 153, 253);
+$lightBlue: rgb(165, 231, 255);
+
+body {
+  background-image: linear-gradient(to bottom right, $deepBlue, $lightBlue);
+  display: flex;
+  flex-direction: column;
+  min-height: calc(100dvh - 32px);
+  background-attachment: fixed;
+  margin: 0 8px;
+}
+
+main {
+  flex: 1;
+}
+
+h1 {
+  font-family: "Snowburst One", system-ui;
+}
+
+@media (max-width: 782px) {
+  body {
+    min-height: calc(100dvh - 46px);
+  }
+}

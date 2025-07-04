@@ -1,1 +1,25 @@
-body{background-color:azure;color:#222}
+/*!***************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[4].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[4].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[4].use[3]!./css/style.scss ***!
+  \***************************************************************************************************************************************************************************************************************************************/
+body {
+  background-image: linear-gradient(to bottom left, rgb(54, 153, 253), rgb(165, 231, 255));
+  display: flex;
+  flex-direction: column;
+  min-height: calc(100dvh - 32px);
+  background-attachment: fixed;
+  margin: 0 8px;
+}
+
+main {
+  flex: 1;
+}
+
+h1 {
+  font-family: "Snowburst One", system-ui;
+}
+
+@media (max-width: 782px) {
+  body {
+    min-height: calc(100dvh - 46px);
+  }
+}
