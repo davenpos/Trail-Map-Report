@@ -1,14 +1,14 @@
-$deepBlue: rgb(54, 153, 253);
-$lightBlue: rgb(165, 231, 255);
+@use "variables";
 
 body {
-  background-image: linear-gradient(to bottom right, $deepBlue, $lightBlue);
+  background-image: linear-gradient(to bottom right, variables.$deepBlue, variables.$lightBlue);
   display: flex;
   flex-direction: column;
   min-height: calc(100dvh - 32px);
   background-attachment: fixed;
   margin: 0 8px;
-  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-family: variables.$fontFamily;
+  text-shadow: 1px 1px 2px black;
 }
 
 p {

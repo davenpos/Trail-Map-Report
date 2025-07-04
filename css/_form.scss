@@ -1,0 +1,68 @@
+@use "variables";
+
+form.wpcf7-form {
+  background-color: rgb(9, 60, 111);
+  padding: 1rem;
+  color: white;
+  border-radius: 10px;
+  max-width: 50%;
+  margin: auto;
+  transition-duration: 0.3s;
+
+  &:hover {
+    box-shadow: 3px 3px 6px rgb(64, 64, 64);
+  }
+
+  select {
+    margin-left: 1rem;
+  }
+
+  input.wpcf7-submit {
+    padding: 0.5rem;
+    background-color: variables.$buttonColor;
+    border: 0;
+    border-radius: 20px;
+    cursor: pointer;
+    text-shadow: 0.5px 0.5px 1px black;
+    transition-duration: 0.3s;
+    font-size: 1.25rem;
+
+    &:hover {
+      background-color: white;
+    }
+  }
+
+  select,
+  input {
+    font-family: variables.$fontFamily;
+    font-size: 1rem;
+  }
+
+  p {
+    &:not(:last-of-type) {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+    }
+
+    &:first-of-type {
+      margin-top: 0;
+    }
+
+    &:last-of-type {
+      margin: 0;
+      text-align: center;
+    }
+
+    span {
+      &.wpcf7-form-control-wrap {
+        text-align: right;
+      }
+
+      &.wpcf7-spinner {
+        position: fixed;
+        left: variables.$spinnerMiddle;
+        top: variables.$spinnerMiddle;
+      }
+    }
+  }
+}
