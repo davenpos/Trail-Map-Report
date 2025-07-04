@@ -39,21 +39,26 @@ form.wpcf7-form {
   }
 
   p {
+    margin: 0;
+
     &:not(:last-of-type) {
       display: grid;
       grid-template-columns: 1fr 1fr;
-    }
 
-    &:first-of-type {
-      margin-top: 0;
+      label {
+        padding-bottom: 1.5rem;
+      }
     }
 
     &:last-of-type {
-      margin: 0;
       text-align: center;
     }
 
     span {
+      &.wpcf7-not-valid-tip {
+        font-size: 1rem;
+      }
+
       &.wpcf7-form-control-wrap {
         text-align: right;
       }
@@ -64,5 +69,14 @@ form.wpcf7-form {
         top: variables.$spinnerMiddle;
       }
     }
+  }
+
+  div.wpcf7-response-output {
+    margin: {
+      top: 1rem;
+      bottom: 0;
+    }
+
+    text-align: center;
   }
 }

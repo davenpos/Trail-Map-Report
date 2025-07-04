@@ -66,16 +66,21 @@ form.wpcf7-form input {
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
   font-size: 1rem;
 }
+form.wpcf7-form p {
+  margin: 0;
+}
 form.wpcf7-form p:not(:last-of-type) {
   display: grid;
   grid-template-columns: 1fr 1fr;
 }
-form.wpcf7-form p:first-of-type {
-  margin-top: 0;
+form.wpcf7-form p:not(:last-of-type) label {
+  padding-bottom: 1.5rem;
 }
 form.wpcf7-form p:last-of-type {
-  margin: 0;
   text-align: center;
+}
+form.wpcf7-form p span.wpcf7-not-valid-tip {
+  font-size: 1rem;
 }
 form.wpcf7-form p span.wpcf7-form-control-wrap {
   text-align: left;
@@ -84,4 +89,9 @@ form.wpcf7-form p span.wpcf7-spinner {
   position: fixed;
   right: calc(50% - 36px);
   top: calc(50% - 36px);
+}
+form.wpcf7-form div.wpcf7-response-output {
+  margin-top: 1rem;
+  margin-bottom: 0;
+  text-align: center;
 }
