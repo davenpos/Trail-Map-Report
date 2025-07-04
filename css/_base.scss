@@ -8,6 +8,11 @@ body {
   min-height: calc(100dvh - 32px);
   background-attachment: fixed;
   margin: 0 8px;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+p {
+  font-size: 1.25rem;
 }
 
 main {
@@ -15,7 +20,14 @@ main {
 }
 
 h1 {
-  font-family: "Snowburst One", system-ui;
+  font: {
+    family: "Snowburst One", system-ui;
+    weight: bold;
+    size: 3rem;
+  }
+
+  text-align: center;
+  margin: 1rem 0;
 }
 
 @media (max-width: 782px) {
