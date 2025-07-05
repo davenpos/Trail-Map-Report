@@ -129,3 +129,6 @@ div#imageContainer img {
   display: block;
   max-width: 100%;
 }
+div#imageContainer map area {
+  cursor: pointer;
+}

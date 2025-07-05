@@ -1,5 +1,11 @@
-div#imageContainer img {
-  margin: auto;
-  display: block;
-  max-width: 100%;
+div#imageContainer {
+  img {
+    margin: auto;
+    display: block;
+    max-width: 100%;
+  }
+
+  map area {
+    cursor: pointer;
+  }
 }
