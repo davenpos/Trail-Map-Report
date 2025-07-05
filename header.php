@@ -9,3 +9,18 @@
 
 <body <?php body_class(); ?>>
   <main>
+    <nav>
+      <?php $pagesList = wp_list_pages(array(
+        'title_li' => null,
+        'echo' => false
+      ));
+
+      $pagesArray = explode("</li>", $pagesList);
+      foreach ($pagesArray as $key => $page) {
+        $output = $page . "</li>";
+        if ($key === 0)
+          $output .= " | ";
+        echo $output;
+      }
+      ?>
+    </nav>

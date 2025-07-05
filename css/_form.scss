@@ -1,13 +1,13 @@
 @use "variables";
 
 form.wpcf7-form {
-  background-color: rgb(9, 60, 111);
+  background-color: variables.$darkBlue;
   padding: 1rem;
   color: white;
   border-radius: 10px;
   max-width: 50%;
   margin: auto;
-  transition-duration: 0.3s;
+  transition-duration: variables.$transitionDuration;
 
   &:hover {
     box-shadow: 3px 3px 6px rgb(64, 64, 64);
@@ -24,7 +24,7 @@ form.wpcf7-form {
     border-radius: 20px;
     cursor: pointer;
     text-shadow: 0.5px 0.5px 1px black;
-    transition-duration: 0.3s;
+    transition-duration: variables.$transitionDuration;
     font-size: 1.25rem;
 
     &:hover {

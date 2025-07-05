@@ -95,3 +95,31 @@ form.wpcf7-form div.wpcf7-response-output {
   margin-bottom: 0;
   text-align: center;
 }
+
+nav {
+  background-color: rgb(9, 60, 111);
+  margin: 0.5rem auto 0;
+  padding: 0.5rem;
+  border-radius: 9999px;
+  width: -moz-fit-content;
+  width: fit-content;
+  cursor: default;
+  font-family: "Snowburst One", system-ui;
+  font-size: 1.5rem;
+  text-align: center;
+}
+nav li {
+  list-style-type: none;
+  display: inline;
+  font-weight: bold;
+}
+nav li a {
+  transition-duration: 0.3s;
+}
+nav li a:hover {
+  color: rgb(208, 218, 255);
+}
+nav,
+nav li a {
+  color: white;
+}
