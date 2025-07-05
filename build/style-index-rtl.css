@@ -123,3 +123,9 @@ nav,
 nav li a {
   color: white;
 }
+
+div#imageContainer img {
+  margin: auto;
+  display: block;
+  max-width: 100%;
+}
