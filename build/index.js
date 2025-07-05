@@ -25,7 +25,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _modules_Tooltip__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modules/Tooltip */ "./src/modules/Tooltip.js");
 
 
-new _modules_Tooltip__WEBPACK_IMPORTED_MODULE_1__["default"]();
+if (document.getElementById("imageContainer")) new _modules_Tooltip__WEBPACK_IMPORTED_MODULE_1__["default"]();
 
 /***/ }),
 
@@ -44,11 +44,35 @@ __webpack_require__.r(__webpack_exports__);
 
 class Tooltip {
   constructor() {
-    this.x;
-    this.y;
-    this.text;
-    this.areas = jquery__WEBPACK_IMPORTED_MODULE_0___default()("#imageContainer map areas");
-    alert("Test");
+    this.tooltip = null;
+    this.areas = jquery__WEBPACK_IMPORTED_MODULE_0___default()("#imageContainer map area");
+    this.events();
+  }
+  events() {
+    this.areas.each((_, area) => {
+      jquery__WEBPACK_IMPORTED_MODULE_0___default()(area).on("mouseenter", e => this.tooltipAppear(e, area));
+      jquery__WEBPACK_IMPORTED_MODULE_0___default()(area).on("mousemove", e => this.tooltipMove(e));
+      jquery__WEBPACK_IMPORTED_MODULE_0___default()(area).on("mouseleave", () => this.tooltipDisappear());
+    });
+    this.addTooltipHTML();
+  }
+  tooltipAppear(e, area) {
+    this.tooltip.text(jquery__WEBPACK_IMPORTED_MODULE_0___default()(area).attr('alt'));
+    this.tooltip.addClass("visible");
+    this.tooltipMove(e);
+  }
+  tooltipMove(e) {
+    this.tooltip.css({
+      left: e.pageX + 10,
+      top: e.pageY + 10
+    });
+  }
+  tooltipDisappear() {
+    this.tooltip.removeClass("visible");
+  }
+  addTooltipHTML() {
+    jquery__WEBPACK_IMPORTED_MODULE_0___default()(document.body).append('<div id="tooltip"></div>');
+    this.tooltip = jquery__WEBPACK_IMPORTED_MODULE_0___default()('#tooltip');
   }
 }
 
