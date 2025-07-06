@@ -7,11 +7,11 @@ add_action('wp_enqueue_scripts', function () {
     'trailData' => get_option('latest_report_data')
   ));
   if (is_page(8)) {
-    wp_enqueue_style('form-css', get_theme_file_uri('/build/form.css'));
-    wp_enqueue_style('mountains-css', get_theme_file_uri('/build/mountains.css'));
+    wp_enqueue_style('form-css', get_theme_file_uri('/build/css/form.css'));
+    wp_enqueue_style('mountains-css', get_theme_file_uri('/build/css/mountains.css'));
   }
   if (is_page(18)) {
-    wp_enqueue_style('image-map-css', get_theme_file_uri('/build/imagemap.css'));
+    wp_enqueue_style('image-map-css', get_theme_file_uri('/build/css/imagemap.css'));
   }
 });
 

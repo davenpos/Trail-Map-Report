@@ -1,4 +1,9 @@
 import "../css/style.scss"
+import $ from 'jquery'
 import Tooltip from "./modules/Tooltip"
+import 'image-map-resizer'
 
-if (document.getElementById("imageContainer")) new Tooltip()
+if ($("#imageContainer")) {
+  $('map').imageMapResize()
+  new Tooltip()
+}

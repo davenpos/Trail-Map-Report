@@ -14,6 +14,26 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./node_modules/image-map-resizer/js/imageMapResizer.min.js":
+/*!******************************************************************!*\
+  !*** ./node_modules/image-map-resizer/js/imageMapResizer.min.js ***!
+  \******************************************************************/
+/***/ ((module, exports) => {
+
+var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*! Image Map Resizer (imageMapResizer.min.js ) - v1.0.10 - 2019-04-10
+ *  Desc: Resize HTML imageMap to scaled image.
+ *  Copyright: (c) 2019 David J. Bradshaw - dave@bradshaw.net
+ *  License: MIT
+ */
+
+!function(){"use strict";function r(){function e(){var r={width:u.width/u.naturalWidth,height:u.height/u.naturalHeight},a={width:parseInt(window.getComputedStyle(u,null).getPropertyValue("padding-left"),10),height:parseInt(window.getComputedStyle(u,null).getPropertyValue("padding-top"),10)};i.forEach(function(e,t){var n=0;o[t].coords=e.split(",").map(function(e){var t=1==(n=1-n)?"width":"height";return a[t]+Math.floor(Number(e)*r[t])}).join(",")})}function t(e){return e.coords.replace(/ *, */g,",").replace(/ +/g,",")}function n(){clearTimeout(d),d=setTimeout(e,250)}function r(e){return document.querySelector('img[usemap="'+e+'"]')}var a=this,o=null,i=null,u=null,d=null;"function"!=typeof a._resize?(o=a.getElementsByTagName("area"),i=Array.prototype.map.call(o,t),u=r("#"+a.name)||r(a.name),a._resize=e,u.addEventListener("load",e,!1),window.addEventListener("focus",e,!1),window.addEventListener("resize",n,!1),window.addEventListener("readystatechange",e,!1),document.addEventListener("fullscreenchange",e,!1),u.width===u.naturalWidth&&u.height===u.naturalHeight||e()):a._resize()}function e(){function t(e){e&&(!function(e){if(!e.tagName)throw new TypeError("Object is not a valid DOM element");if("MAP"!==e.tagName.toUpperCase())throw new TypeError("Expected <MAP> tag, found <"+e.tagName+">.")}(e),r.call(e),n.push(e))}var n;return function(e){switch(n=[],typeof e){case"undefined":case"string":Array.prototype.forEach.call(document.querySelectorAll(e||"map"),t);break;case"object":t(e);break;default:throw new TypeError("Unexpected data type ("+typeof e+").")}return n}} true?!(__WEBPACK_AMD_DEFINE_ARRAY__ = [], __WEBPACK_AMD_DEFINE_FACTORY__ = (e),
+		__WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ?
+		(__WEBPACK_AMD_DEFINE_FACTORY__.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__)) : __WEBPACK_AMD_DEFINE_FACTORY__),
+		__WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__)):0,"jQuery"in window&&(window.jQuery.fn.imageMapResize=function(){return this.filter("map").each(r).end()})}();
+//# sourceMappingURL=imageMapResizer.map
+
+/***/ }),
+
 /***/ "./node_modules/slugify/slugify.js":
 /*!*****************************************!*\
   !*** ./node_modules/slugify/slugify.js ***!
@@ -98,10 +118,19 @@ __webpack_require__.r(__webpack_exports__);
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _css_style_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../css/style.scss */ "./css/style.scss");
-/* harmony import */ var _modules_Tooltip__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modules/Tooltip */ "./src/modules/Tooltip.js");
+/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! jquery */ "jquery");
+/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(jquery__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _modules_Tooltip__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./modules/Tooltip */ "./src/modules/Tooltip.js");
+/* harmony import */ var image_map_resizer__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! image-map-resizer */ "./node_modules/image-map-resizer/js/imageMapResizer.min.js");
+/* harmony import */ var image_map_resizer__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(image_map_resizer__WEBPACK_IMPORTED_MODULE_3__);
 
 
-if (document.getElementById("imageContainer")) new _modules_Tooltip__WEBPACK_IMPORTED_MODULE_1__["default"]();
+
+
+if (jquery__WEBPACK_IMPORTED_MODULE_1___default()("#imageContainer")) {
+  jquery__WEBPACK_IMPORTED_MODULE_1___default()('map').imageMapResize();
+  new _modules_Tooltip__WEBPACK_IMPORTED_MODULE_2__["default"]();
+}
 
 /***/ }),
 
@@ -134,6 +163,12 @@ class Tooltip {
       jquery__WEBPACK_IMPORTED_MODULE_0___default()(area).on("mouseenter", e => this.tooltipAppear(e, area));
       jquery__WEBPACK_IMPORTED_MODULE_0___default()(area).on("mousemove", e => this.tooltipMove(e));
       jquery__WEBPACK_IMPORTED_MODULE_0___default()(area).on("mouseleave", () => this.tooltipDisappear());
+      jquery__WEBPACK_IMPORTED_MODULE_0___default()(area).on("click", e => this.tooltipClick(e, area));
+    });
+    jquery__WEBPACK_IMPORTED_MODULE_0___default()(document).on("click touchstart", e => {
+      if (this.tooltip && !jquery__WEBPACK_IMPORTED_MODULE_0___default()(e.target).is("area") && !jquery__WEBPACK_IMPORTED_MODULE_0___default()(e.target).closest("#tooltip").length) {
+        this.tooltipDisappear();
+      }
     });
     this.addTooltipHTML();
   }
@@ -159,6 +194,11 @@ class Tooltip {
   }
   tooltipDisappear() {
     this.tooltip.removeClass("visible");
+  }
+  tooltipClick(e, area) {
+    e.preventDefault();
+    e.stopPropagation();
+    this.tooltipAppear(e, area);
   }
   addTooltipHTML() {
     jquery__WEBPACK_IMPORTED_MODULE_0___default()(document.body).append('<div id="tooltip"></div>');

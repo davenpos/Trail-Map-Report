@@ -14,7 +14,15 @@ export default class Tooltip {
       $(area).on("mouseenter", e => this.tooltipAppear(e, area))
       $(area).on("mousemove", e => this.tooltipMove(e))
       $(area).on("mouseleave", () => this.tooltipDisappear())
+      $(area).on("click", e => this.tooltipClick(e, area))
     })
+
+    $(document).on("click touchstart", e => {
+      if (this.tooltip && !$(e.target).is("area") && !$(e.target).closest("#tooltip").length) {
+        this.tooltipDisappear()
+      }
+    })
+
     this.addTooltipHTML()
   }
 
@@ -39,6 +47,12 @@ export default class Tooltip {
 
   tooltipDisappear() {
     this.tooltip.removeClass("visible")
+  }
+
+  tooltipClick(e, area) {
+    e.preventDefault()
+    e.stopPropagation()
+    this.tooltipAppear(e, area)
   }
 
   addTooltipHTML() {
