@@ -9,6 +9,7 @@ add_action('wp_enqueue_scripts', function () {
   if (is_page(8)) {
     wp_enqueue_style('form-css', get_theme_file_uri('/build/css/form.css'));
     wp_enqueue_style('mountains-css', get_theme_file_uri('/build/css/mountains.css'));
+    wp_enqueue_style('cloud-css', get_theme_file_uri('/build/css/cloud.css'));
   }
   if (is_page(18)) {
     wp_enqueue_style('image-map-css', get_theme_file_uri('/build/css/imagemap.css'));

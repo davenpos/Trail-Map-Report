@@ -1,0 +1,51 @@
+.cloud {
+  top: 400px;
+  -webkit-animation: cloud 70s infinite linear;
+  animation: cloud 70s infinite linear;
+
+  &:before {
+    left: 50px;
+  }
+
+  &:after {
+    left: 25px;
+    top: -10px;
+  }
+
+  &:before,
+  &:after {
+    content: '';
+  }
+
+  &,
+  &:before,
+  &:after {
+    position: absolute;
+    width: 70px;
+    height: 30px;
+    z-index: 1;
+    background-color: white;
+    -webkit-border-radius: 100px / 50px;
+    border-radius: 100px / 50px;
+  }
+}
+
+@-webkit-keyframes cloud {
+  0% {
+    left: -125px;
+  }
+
+  100% {
+    left: 1600px;
+  }
+}
+
+@keyframes cloud {
+  0% {
+    left: -125px;
+  }
+
+  100% {
+    left: 1600px;
+  }
+}

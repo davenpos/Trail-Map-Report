@@ -19,6 +19,7 @@ div#tooltip {
   z-index: 9999;
   color: white;
   border-radius: 5px;
+  -webkit-border-radius: 5px;
   text-align: center;
   padding: 0.5rem;
   transition-property: opacity;
