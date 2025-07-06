@@ -141,6 +141,7 @@ div#tooltip {
   z-index: 9999;
   color: white;
   border-radius: 5px;
+  text-align: center;
   transition-property: opacity;
   transition-duration: 0.3s;
   padding: 0.5rem;

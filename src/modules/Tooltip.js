@@ -1,9 +1,11 @@
 import $ from 'jquery'
+import slugify from 'slugify'
 
 export default class Tooltip {
   constructor() {
     this.tooltip = null
     this.areas = $("#imageContainer map area")
+    this.trailInfo = siteData.trailData
     this.events()
   }
 
@@ -17,7 +19,13 @@ export default class Tooltip {
   }
 
   tooltipAppear(e, area) {
-    this.tooltip.text($(area).attr('alt'))
+    const alt = $(area).attr('alt')
+    const slug = slugify(alt, { lower: true, remove: /'/g })
+    const status = this.trailInfo === "" ? "Not Set" : this.trailInfo[slug][0]
+    this.tooltip.html(`
+      ${alt}<br />
+      <b>Status:</b> ${status}
+    `)
     this.tooltip.addClass("visible")
     this.tooltipMove(e)
   }
