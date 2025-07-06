@@ -1,0 +1,62 @@
+form.wpcf7-form {
+  background-color: rgb(9, 60, 111);
+  padding: 1rem;
+  color: white;
+  border-radius: 10px;
+  max-width: 50%;
+  margin: auto;
+  transition-duration: 0.3s;
+}
+form.wpcf7-form:hover {
+  box-shadow: 3px 3px 6px rgb(64, 64, 64);
+}
+form.wpcf7-form select {
+  margin-left: 1rem;
+}
+form.wpcf7-form input.wpcf7-submit {
+  padding: 0.5rem;
+  background-color: rgb(130, 226, 255);
+  border: 0;
+  border-radius: 20px;
+  cursor: pointer;
+  text-shadow: 0.5px 0.5px 1px black;
+  transition-duration: 0.3s;
+  font-size: 1.25rem;
+}
+form.wpcf7-form input.wpcf7-submit:hover {
+  background-color: white;
+}
+form.wpcf7-form select,
+form.wpcf7-form input {
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+  font-size: 1rem;
+}
+form.wpcf7-form p {
+  margin: 0;
+}
+form.wpcf7-form p:not(:last-of-type) {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+form.wpcf7-form p:not(:last-of-type) label {
+  padding-bottom: 1.5rem;
+}
+form.wpcf7-form p:last-of-type {
+  text-align: center;
+}
+form.wpcf7-form p span.wpcf7-not-valid-tip {
+  font-size: 1rem;
+}
+form.wpcf7-form p span.wpcf7-form-control-wrap {
+  text-align: right;
+}
+form.wpcf7-form p span.wpcf7-spinner {
+  position: fixed;
+  left: calc(50% - 36px);
+  top: calc(50% - 36px);
+}
+form.wpcf7-form div.wpcf7-response-output {
+  margin-top: 1rem;
+  margin-bottom: 0;
+  text-align: center;
+}

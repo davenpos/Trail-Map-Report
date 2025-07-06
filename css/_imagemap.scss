@@ -21,13 +21,12 @@ div#tooltip {
   color: white;
   border-radius: 5px;
   text-align: center;
+  padding: 0.5rem;
 
   transition: {
     property: opacity;
     duration: variables.$transitionDuration;
   }
-
-  padding: 0.5rem;
 
   &.visible {
     opacity: 0.8;

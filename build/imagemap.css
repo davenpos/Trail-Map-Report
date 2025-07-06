@@ -1,0 +1,25 @@
+div#imageContainer img {
+  margin: auto;
+  display: block;
+  max-width: 100%;
+}
+div#imageContainer map area {
+  cursor: pointer;
+}
+
+div#tooltip {
+  position: absolute;
+  background-color: black;
+  opacity: 0;
+  pointer-events: none;
+  z-index: 9999;
+  color: white;
+  border-radius: 5px;
+  text-align: center;
+  padding: 0.5rem;
+  transition-property: opacity;
+  transition-duration: 0.3s;
+}
+div#tooltip.visible {
+  opacity: 0.8;
+}
