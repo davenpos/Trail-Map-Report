@@ -1,5 +1,6 @@
 import $ from 'jquery'
 import slugify from 'slugify'
+import 'image-map-resizer'
 
 export default class Tooltip {
   constructor() {
@@ -24,6 +25,7 @@ export default class Tooltip {
     })
 
     this.addTooltipHTML()
+    $('map').imageMapResize()
   }
 
   tooltipAppear(e, area) {

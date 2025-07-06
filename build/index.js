@@ -118,19 +118,10 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _css_style_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../css/style.scss */ "./css/style.scss");
-/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! jquery */ "jquery");
-/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(jquery__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _modules_Tooltip__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./modules/Tooltip */ "./src/modules/Tooltip.js");
-/* harmony import */ var image_map_resizer__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! image-map-resizer */ "./node_modules/image-map-resizer/js/imageMapResizer.min.js");
-/* harmony import */ var image_map_resizer__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(image_map_resizer__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _modules_Tooltip__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modules/Tooltip */ "./src/modules/Tooltip.js");
 
 
-
-
-if (jquery__WEBPACK_IMPORTED_MODULE_1___default()("#imageContainer")) {
-  jquery__WEBPACK_IMPORTED_MODULE_1___default()('map').imageMapResize();
-  new _modules_Tooltip__WEBPACK_IMPORTED_MODULE_2__["default"]();
-}
+if (document.getElementById("imageContainer")) new _modules_Tooltip__WEBPACK_IMPORTED_MODULE_1__["default"]();
 
 /***/ }),
 
@@ -149,6 +140,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(jquery__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var slugify__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! slugify */ "./node_modules/slugify/slugify.js");
 /* harmony import */ var slugify__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(slugify__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var image_map_resizer__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! image-map-resizer */ "./node_modules/image-map-resizer/js/imageMapResizer.min.js");
+/* harmony import */ var image_map_resizer__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(image_map_resizer__WEBPACK_IMPORTED_MODULE_2__);
+
 
 
 class Tooltip {
@@ -171,6 +165,7 @@ class Tooltip {
       }
     });
     this.addTooltipHTML();
+    jquery__WEBPACK_IMPORTED_MODULE_0___default()('map').imageMapResize();
   }
   tooltipAppear(e, area) {
     const alt = jquery__WEBPACK_IMPORTED_MODULE_0___default()(area).attr('alt');
