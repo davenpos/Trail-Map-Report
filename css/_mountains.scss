@@ -1,0 +1,63 @@
+@use "variables";
+
+div.mountain {
+  bottom: 0;
+
+  border: {
+    left: 150px solid transparent;
+    right: 150px solid transparent;
+    bottom: 250px solid #5c3ea2;
+  }
+
+  &,
+  & * {
+    position: absolute;
+  }
+
+  @for $i from 1 through 3 {
+    &#mountain-#{$i} {
+      left: calc(50% - ($i * 100px - 50px));
+
+      @if mod($i, 2)==1 {
+        bottom: -30px;
+        opacity: 0.5;
+        z-index: 1;
+      }
+
+      @else {
+        z-index: 2;
+      }
+    }
+  }
+
+  div.mountain-top {
+    right: -47px;
+    z-index: 3;
+
+    border: {
+      left: 47px solid transparent;
+      right: 47px solid transparent;
+      bottom: 77px solid variables.$mountainTopWhite;
+    }
+
+    @for $i from 1 through 2 {
+      div.mountain-cap-#{$i} {
+        top: 76px;
+
+        border: {
+          top: 20px solid variables.$mountainTopWhite;
+          left: 15px solid transparent;
+          right: 15px solid transparent;
+        }
+
+        @if $i ==1 {
+          right: 7px;
+        }
+
+        @else {
+          left: 5px;
+        }
+      }
+    }
+  }
+}

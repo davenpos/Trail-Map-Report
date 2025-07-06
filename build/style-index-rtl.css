@@ -11,6 +11,9 @@ body {
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
   text-shadow: -1px 1px 2px black;
 }
+body.page-id-8 {
+  overflow: hidden;
+}
 
 p {
   font-size: 1.25rem;
@@ -58,4 +61,51 @@ nav li a:hover {
 nav,
 nav li a {
   color: white;
+}
+
+div.mountain {
+  bottom: 0;
+  border-right: 150px solid transparent;
+  border-left: 150px solid transparent;
+  border-bottom: 250px solid #5c3ea2;
+}
+div.mountain, div.mountain * {
+  position: absolute;
+}
+div.mountain#mountain-1 {
+  right: calc(50% - 50px);
+  bottom: -30px;
+  opacity: 0.5;
+  z-index: 1;
+}
+div.mountain#mountain-2 {
+  right: calc(50% - 150px);
+  z-index: 2;
+}
+div.mountain#mountain-3 {
+  right: calc(50% - 250px);
+  bottom: -30px;
+  opacity: 0.5;
+  z-index: 1;
+}
+div.mountain div.mountain-top {
+  left: -47px;
+  z-index: 3;
+  border-right: 47px solid transparent;
+  border-left: 47px solid transparent;
+  border-bottom: 77px solid #e6e6e6;
+}
+div.mountain div.mountain-top div.mountain-cap-1 {
+  top: 76px;
+  border-top: 20px solid #e6e6e6;
+  border-right: 15px solid transparent;
+  border-left: 15px solid transparent;
+  left: 7px;
+}
+div.mountain div.mountain-top div.mountain-cap-2 {
+  top: 76px;
+  border-top: 20px solid #e6e6e6;
+  border-right: 15px solid transparent;
+  border-left: 15px solid transparent;
+  right: 5px;
 }

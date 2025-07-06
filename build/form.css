@@ -6,6 +6,9 @@ form.wpcf7-form {
   max-width: 50%;
   margin: auto;
   transition-duration: 0.3s;
+  z-index: 4;
+  position: relative;
+  opacity: 0.8;
 }
 form.wpcf7-form:hover {
   box-shadow: 3px 3px 6px rgb(64, 64, 64);
