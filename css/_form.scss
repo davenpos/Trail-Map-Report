@@ -83,3 +83,9 @@ form.wpcf7-form {
     text-align: center;
   }
 }
+
+@media (max-width: 782px) {
+  form.wpcf7-form {
+    max-width: 100%;
+  }
+}

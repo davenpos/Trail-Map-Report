@@ -31,11 +31,6 @@ h1 {
   margin: 1rem 0;
 }
 
-@media (max-width: 782px) {
-  body {
-    min-height: calc(100dvh - 46px);
-  }
-}
 nav {
   background-color: rgb(9, 60, 111);
   margin: 0.5rem auto 0;
@@ -63,51 +58,20 @@ nav li a {
   color: white;
 }
 
-div.mountain {
-  bottom: 0;
-  border-left: 150px solid transparent;
-  border-right: 150px solid transparent;
-  border-bottom: 250px solid #5c3ea2;
-}
-div.mountain, div.mountain * {
-  position: absolute;
-}
-div.mountain#mountain-1 {
-  left: calc(50% - 50px);
-  bottom: -30px;
-  opacity: 0.5;
-  z-index: 1;
-}
-div.mountain#mountain-2 {
-  left: calc(50% - 150px);
-  z-index: 2;
-}
-div.mountain#mountain-3 {
-  left: calc(50% - 250px);
-  bottom: -30px;
-  opacity: 0.5;
-  z-index: 1;
-}
-div.mountain div.mountain-top {
-  right: -47px;
-  z-index: 3;
-  border-left: 47px solid transparent;
-  border-right: 47px solid transparent;
-  border-bottom: 77px solid #e6e6e6;
-}
-div.mountain div.mountain-top div.mountain-cap-1 {
-  top: 76px;
-  border-top: 20px solid #e6e6e6;
-  border-left: 15px solid transparent;
-  border-right: 15px solid transparent;
-  right: 7px;
-}
-div.mountain div.mountain-top div.mountain-cap-2 {
-  top: 76px;
-  border-top: 20px solid #e6e6e6;
-  border-left: 15px solid transparent;
-  border-right: 15px solid transparent;
-  left: 5px;
+@media (max-width: 782px) {
+  body {
+    min-height: calc(100dvh - 46px);
+  }
+  h1 {
+    font-size: 2rem;
+    margin: 0.5rem 0;
+  }
+  p {
+    font-size: 1rem;
+  }
+  nav {
+    font-size: 1rem;
+  }
 }
 
 /*# sourceMappingURL=style-index.css.map*/

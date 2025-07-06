@@ -63,3 +63,9 @@ form.wpcf7-form div.wpcf7-response-output {
   margin-bottom: 0;
   text-align: center;
 }
+
+@media (max-width: 782px) {
+  form.wpcf7-form {
+    max-width: 100%;
+  }
+}

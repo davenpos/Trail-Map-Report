@@ -22,14 +22,15 @@ while (have_posts()):
           shape="poly">
       </map>
     </div>
-  <?php endif;
-  for ($x = 1; $x <= 3; $x++) { ?>
-    <div class="mountain" id="mountain-<?php echo $x; ?>">
-      <div class="mountain-top">
-        <div class="mountain-cap-1"></div>
-        <div class="mountain-cap-2"></div>
+  <?php else:
+    for ($x = 1; $x <= 3; $x++): ?>
+      <div class="mountain" id="mountain-<?php echo $x; ?>">
+        <div class="mountain-top">
+          <div class="mountain-cap-1"></div>
+          <div class="mountain-cap-2"></div>
+        </div>
       </div>
-    </div>
-  <?php }
+    <?php endfor;
+  endif;
 endwhile;
 get_footer();
