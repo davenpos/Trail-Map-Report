@@ -1,7 +1,16 @@
 @use "variables";
 
 body.page-id-8 {
-  overflow: hidden;
+
+  &,
+  & div#siteWrapper {
+    overflow: hidden;
+  }
+
+  div#siteWrapper {
+    position: relative;
+    min-height: variables.$bodyHeight;
+  }
 }
 
 div.mountain {

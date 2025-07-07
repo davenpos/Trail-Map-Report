@@ -1,5 +1,7 @@
 @media (max-width: 782px) {
-  body {
+
+  body,
+  body.page-id-8 div#siteWrapper {
     min-height: calc(100dvh - 46px);
   }
 

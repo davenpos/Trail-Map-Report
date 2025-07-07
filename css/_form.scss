@@ -91,5 +91,9 @@ form.wpcf7-form {
 @media (max-width: 782px) {
   form.wpcf7-form {
     max-width: 100%;
+
+    .wpcf7-submit {
+      font-size: 1rem;
+    }
   }
 }

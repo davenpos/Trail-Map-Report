@@ -16,8 +16,9 @@
     </div>
   <?php endfor; ?>
   <div class="cloud"></div>
-<?php endif;
-wp_footer(); ?>
+<?php endif; ?>
+</div>
+<?php wp_footer(); ?>
 </body>
 
 </html>

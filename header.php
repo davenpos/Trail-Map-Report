@@ -8,19 +8,20 @@
 </head>
 
 <body <?php body_class(); ?>>
-  <nav>
-    <?php $pagesList = wp_list_pages(array(
-      'title_li' => null,
-      'echo' => false
-    ));
+  <div id="siteWrapper">
+    <nav>
+      <?php $pagesList = wp_list_pages(array(
+        'title_li' => null,
+        'echo' => false
+      ));
 
-    $pagesArray = explode("</li>", $pagesList);
-    foreach ($pagesArray as $key => $page) {
-      $output = $page . "</li>";
-      if ($key === 0)
-        $output .= " | ";
-      echo $output;
-    }
-    ?>
-  </nav>
-  <main>
+      $pagesArray = explode("</li>", $pagesList);
+      foreach ($pagesArray as $key => $page) {
+        $output = $page . "</li>";
+        if ($key === 0)
+          $output .= " | ";
+        echo $output;
+      }
+      ?>
+    </nav>
+    <main>

@@ -1,5 +1,9 @@
-body.page-id-8 {
+body.page-id-8, body.page-id-8 div#siteWrapper {
   overflow: hidden;
+}
+body.page-id-8 div#siteWrapper {
+  position: relative;
+  min-height: calc(100dvh - 32px);
 }
 
 div.mountain {

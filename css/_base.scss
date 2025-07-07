@@ -1,10 +1,15 @@
 @use "variables";
 
+html,
+body {
+  max-width: 100vw;
+}
+
 body {
   background-image: linear-gradient(to bottom right, variables.$deepBlue, variables.$lightBlue);
   display: flex;
   flex-direction: column;
-  min-height: calc(100dvh - 32px);
+  min-height: variables.$bodyHeight;
   background-attachment: fixed;
   margin: 0 8px;
   font-family: variables.$fontFamily;
