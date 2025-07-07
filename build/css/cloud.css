@@ -1,6 +1,7 @@
 .cloud {
   top: 400px;
   -webkit-animation: cloud 70s infinite linear;
+  -moz-animation: cloud 70s infinite linear;
   animation: cloud 70s infinite linear;
 }
 .cloud:before {

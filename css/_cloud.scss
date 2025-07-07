@@ -2,8 +2,9 @@
 
 .cloud {
   top: 400px;
-  -webkit-animation: cloud 70s infinite linear;
-  animation: cloud 70s infinite linear;
+  -webkit-animation: variables.$cloudAnimation;
+  -moz-animation: variables.$cloudAnimation;
+  animation: variables.$cloudAnimation;
 
   &:before {
     left: 50px;
