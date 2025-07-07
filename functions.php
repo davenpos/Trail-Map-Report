@@ -28,3 +28,10 @@ add_action('wpcf7_mail_sent', function ($form) {
     update_option('latest_report_data', $data);
   }
 });
+
+add_filter('ai1wm_exclude_themes_from_export', function ($exclude) {
+  $exclude[] = 'trailmapreport/node_modules';
+  $exclude[] = 'trailmapreport/.git';
+  $exclude[] = 'trailmapreport/.gitignore';
+  return $exclude;
+});
