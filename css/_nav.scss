@@ -4,8 +4,9 @@ nav {
   background-color: variables.$darkBlue;
   margin: 0.5rem auto 0;
   padding: 0.5rem;
-  border-radius: 9999px;
-  -webkit-border-radius: 9999px;
+  border-radius: variables.$navRadius;
+  -webkit-border-radius: variables.$navRadius;
+  -moz-border-radius: variables.$navRadius;
   width: fit-content;
   cursor: default;
 

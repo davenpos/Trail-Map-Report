@@ -4,8 +4,9 @@ form.wpcf7-form {
   background-color: variables.$darkBlue;
   padding: 1rem;
   color: white;
-  border-radius: 10px;
-  -webkit-border-radius: 10px;
+  border-radius: variables.$formRadius;
+  -webkit-border-radius: variables.$formRadius;
+  -moz-border-radius: variables.$formRadius;
   max-width: 50%;
   margin: auto;
   transition-duration: variables.$transitionDuration;
@@ -25,8 +26,9 @@ form.wpcf7-form {
     padding: 0.5rem;
     background-color: variables.$buttonColor;
     border: 0;
-    border-radius: 20px;
-    -webkit-border-radius: 20px;
+    border-radius: variables.$submitRadius;
+    -webkit-border-radius: variables.$submitRadius;
+    -moz-border-radius: variables.$submitRadius;
     cursor: pointer;
     text-shadow: 0.5px 0.5px 1px black;
     transition-duration: variables.$transitionDuration;

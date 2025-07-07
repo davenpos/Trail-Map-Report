@@ -35,6 +35,7 @@ nav {
   padding: 0.5rem;
   border-radius: 9999px;
   -webkit-border-radius: 9999px;
+  -moz-border-radius: 9999px;
   width: -moz-fit-content;
   width: fit-content;
   cursor: default;

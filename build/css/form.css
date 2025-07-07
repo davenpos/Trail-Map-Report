@@ -4,6 +4,7 @@ form.wpcf7-form {
   color: white;
   border-radius: 10px;
   -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
   max-width: 50%;
   margin: auto;
   transition-duration: 0.3s;
@@ -23,6 +24,7 @@ form.wpcf7-form input.wpcf7-submit {
   border: 0;
   border-radius: 20px;
   -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
   cursor: pointer;
   text-shadow: 0.5px 0.5px 1px black;
   transition-duration: 0.3s;

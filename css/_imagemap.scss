@@ -23,15 +23,14 @@ div#tooltip {
   pointer-events: none;
   z-index: 9999;
   color: white;
-  border-radius: 5px;
-  -webkit-border-radius: 5px;
+  border-radius: variables.$tooltipRadius;
+  -webkit-border-radius: variables.$tooltipRadius;
+  -moz-border-radius: variables.$tooltipRadius;
   text-align: center;
   padding: 0.5rem;
-
-  transition: {
-    property: opacity;
-    duration: variables.$transitionDuration;
-  }
+  -webkit-transition: opacity variables.$transitionDuration;
+  -moz-transition: opacity variables.$transitionDuration;
+  transition: opacity variables.$transitionDuration;
 
   &.visible {
     opacity: 0.8;

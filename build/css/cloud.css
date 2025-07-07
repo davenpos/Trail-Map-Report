@@ -19,11 +19,29 @@
   height: 30px;
   z-index: 1;
   background-color: white;
-  -webkit-border-radius: 100px/50px;
-  border-radius: 100px/50px;
+  border-top-left-radius: 100px 50px;
+  border-top-right-radius: 100px 50px;
+  border-bottom-left-radius: 100px 50px;
+  border-bottom-right-radius: 100px 50px;
+  -webkit-border-top-left-radius: 100px 50px;
+  -webkit-border-top-right-radius: 100px 50px;
+  -webkit-border-bottom-left-radius: 100px 50px;
+  -webkit-border-bottom-right-radius: 100px 50px;
+  -moz-border-top-left-radius: 100px 50px;
+  -moz-border-top-right-radius: 100px 50px;
+  -moz-border-bottom-left-radius: 100px 50px;
+  -moz-border-bottom-right-radius: 100px 50px;
 }
 
 @-webkit-keyframes cloud {
+  0% {
+    left: -125px;
+  }
+  100% {
+    left: 1600px;
+  }
+}
+@-moz-keyframes cloud {
   0% {
     left: -125px;
   }
