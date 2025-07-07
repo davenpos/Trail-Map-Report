@@ -8,7 +8,7 @@ form.wpcf7-form {
   max-width: 50%;
   margin: auto;
   transition-duration: 0.3s;
-  z-index: 4;
+  z-index: 5;
   position: relative;
   opacity: 0.8;
 }
