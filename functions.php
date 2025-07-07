@@ -35,3 +35,5 @@ add_filter('ai1wm_exclude_themes_from_export', function ($exclude) {
   $exclude[] = 'trailmapreport/.gitignore';
   return $exclude;
 });
+
+add_filter('wpcf7_skip_mail', '__return_true');
