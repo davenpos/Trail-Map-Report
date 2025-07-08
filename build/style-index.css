@@ -22,6 +22,9 @@ body div#siteWrapper {
   min-height: calc(100dvh - 46px);
   overflow-x: hidden;
 }
+body.admin-bar div#siteWrapper {
+  min-height: 100dvh;
+}
 
 p {
   font-size: 1.25rem;

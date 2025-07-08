@@ -3,6 +3,9 @@ body.page-id-8, body.page-id-8 div#siteWrapper {
 }
 body.page-id-8 div#siteWrapper {
   position: relative;
+  min-height: 100dvh;
+}
+body.page-id-8.admin-bar div#siteWrapper {
   min-height: calc(100dvh - 32px);
 }
 

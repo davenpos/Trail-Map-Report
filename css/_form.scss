@@ -9,7 +9,7 @@ form.wpcf7-form {
   -webkit-border-radius: variables.$formRadius;
   -moz-border-radius: variables.$formRadius;
   max-width: 50%;
-  margin: auto;
+  margin: 0 auto 8px;
   transition-duration: variables.$transitionDuration;
   z-index: 5;
   position: relative;
@@ -25,6 +25,7 @@ form.wpcf7-form {
   }
 
   input.wpcf7-submit {
+    color: black;
     padding: 0.5rem;
     background-color: variables.$buttonColor;
     border: 0;
@@ -81,9 +82,11 @@ form.wpcf7-form {
   }
 
   div.wpcf7-response-output {
-    margin: {
-      top: 1rem;
-      bottom: 0;
+    margin: 1rem 0 0;
+
+    padding: {
+      left: 0;
+      right: 0;
     }
 
     text-align: center;
@@ -97,6 +100,11 @@ form.wpcf7-form {
 
     .wpcf7-submit {
       font-size: 1rem !important;
+    }
+
+    div.wpcf7-response-output,
+    span.wpcf7-not-valid-tip {
+      font-size: 0.9rem;
     }
   }
 }

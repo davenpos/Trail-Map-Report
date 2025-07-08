@@ -6,7 +6,7 @@ form.wpcf7-form {
   -webkit-border-radius: 10px;
   -moz-border-radius: 10px;
   max-width: 50%;
-  margin: auto;
+  margin: 0 auto 8px;
   transition-duration: 0.3s;
   z-index: 5;
   position: relative;
@@ -20,6 +20,7 @@ form.wpcf7-form select {
   margin-left: 1rem;
 }
 form.wpcf7-form input.wpcf7-submit {
+  color: black;
   padding: 0.5rem;
   background-color: rgb(130, 226, 255);
   border: 0;
@@ -64,8 +65,9 @@ form.wpcf7-form p span.wpcf7-spinner {
   top: calc(50% - 36px);
 }
 form.wpcf7-form div.wpcf7-response-output {
-  margin-top: 1rem;
-  margin-bottom: 0;
+  margin: 1rem 0 0;
+  padding-left: 0;
+  padding-right: 0;
   text-align: center;
 }
 
@@ -76,5 +78,9 @@ form.wpcf7-form div.wpcf7-response-output {
   }
   form.wpcf7-form .wpcf7-submit {
     font-size: 1rem !important;
+  }
+  form.wpcf7-form div.wpcf7-response-output,
+  form.wpcf7-form span.wpcf7-not-valid-tip {
+    font-size: 0.9rem;
   }
 }

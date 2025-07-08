@@ -9,6 +9,10 @@ body.page-id-8 {
 
   div#siteWrapper {
     position: relative;
+    min-height: 100dvh;
+  }
+
+  &.admin-bar div#siteWrapper {
     min-height: variables.$bodyHeight;
   }
 }
