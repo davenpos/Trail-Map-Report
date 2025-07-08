@@ -11,6 +11,7 @@ form.wpcf7-form {
   z-index: 5;
   position: relative;
   opacity: 0.8;
+  border: 2px solid black;
 }
 form.wpcf7-form:hover {
   box-shadow: 3px 3px 6px rgb(64, 64, 64);
@@ -71,8 +72,9 @@ form.wpcf7-form div.wpcf7-response-output {
 @media (max-width: 782px) {
   form.wpcf7-form {
     max-width: 100%;
+    padding: 0.75rem;
   }
   form.wpcf7-form .wpcf7-submit {
-    font-size: 1rem;
+    font-size: 1rem !important;
   }
 }

@@ -6,6 +6,7 @@ div#imageContainer img {
   margin: auto;
   display: block;
   max-width: 100%;
+  border: 1px solid black;
 }
 div#imageContainer map area {
   cursor: pointer;

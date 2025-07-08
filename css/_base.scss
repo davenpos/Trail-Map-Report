@@ -1,9 +1,5 @@
 @use "variables";
-
-html,
-body {
-  max-width: 100vw;
-}
+@use "fonts";
 
 body {
   background-image: linear-gradient(to bottom right, variables.$deepBlue, variables.$lightBlue);
@@ -17,6 +13,7 @@ body {
 
   div#siteWrapper {
     min-height: calc(100dvh - 46px);
+    overflow-x: hidden;
   }
 }
 
@@ -31,13 +28,22 @@ main {
   margin: 0 8px;
 }
 
+div#postContent {
+  max-width: 60rem;
+  margin: auto;
+
+  p:first-of-type {
+    margin-top: 0;
+  }
+}
+
 h1 {
   font: {
-    family: "Snowburst One", system-ui;
-    weight: bold;
+    family: "Wonderia";
     size: 3rem;
   }
 
   text-align: center;
-  margin: 1rem 0;
+  margin: 0.5rem 0;
+  letter-spacing: 0.2rem;
 }

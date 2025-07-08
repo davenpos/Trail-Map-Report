@@ -1,17 +1,19 @@
 @use "variables";
+@use "fonts";
 
 nav {
   background-color: variables.$darkBlue;
   margin: 0.5rem auto 0;
-  padding: 0.5rem;
+  padding: 0.2rem 0.5rem;
   border-radius: variables.$navRadius;
   -webkit-border-radius: variables.$navRadius;
   -moz-border-radius: variables.$navRadius;
   width: fit-content;
   cursor: default;
+  letter-spacing: 0.2rem;
 
   font: {
-    family: "Snowburst One", system-ui;
+    family: "Wonderia";
     size: 1.5rem;
   }
 
