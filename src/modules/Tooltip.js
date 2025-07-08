@@ -5,6 +5,7 @@ import "image-map-resizer"
 export default class Tooltip {
   constructor() {
     this.tooltip = null
+    this.map = $("#imageContainer map")
     this.areas = $("#imageContainer map area")
     this.trailInfo = siteData.trailData
     this.events()
@@ -25,7 +26,7 @@ export default class Tooltip {
     })
 
     this.addTooltipHTML()
-    $("map").imageMapResize()
+    this.map.imageMapResize()
   }
 
   tooltipAppear(e, area) {

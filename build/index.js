@@ -148,6 +148,7 @@ __webpack_require__.r(__webpack_exports__);
 class Tooltip {
   constructor() {
     this.tooltip = null;
+    this.map = jquery__WEBPACK_IMPORTED_MODULE_0___default()("#imageContainer map");
     this.areas = jquery__WEBPACK_IMPORTED_MODULE_0___default()("#imageContainer map area");
     this.trailInfo = siteData.trailData;
     this.events();
@@ -165,7 +166,7 @@ class Tooltip {
       }
     });
     this.addTooltipHTML();
-    jquery__WEBPACK_IMPORTED_MODULE_0___default()("map").imageMapResize();
+    this.map.imageMapResize();
   }
   tooltipAppear(e, area) {
     const alt = jquery__WEBPACK_IMPORTED_MODULE_0___default()(area).attr("alt");
