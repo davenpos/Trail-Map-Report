@@ -10,10 +10,10 @@
 <body <?php body_class(); ?>>
   <div id="siteWrapper">
     <nav>
-      <?php $pagesList = wp_list_pages(array(
+      <?php $pagesList = wp_list_pages([
         "title_li" => null,
         "echo" => false
-      ));
+      ]);
 
       $pagesArray = explode("</li>", $pagesList);
       foreach ($pagesArray as $key => $page) {
