@@ -43,7 +43,7 @@ form.wpcf7-form p {
 }
 form.wpcf7-form p:not(:last-of-type) {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: auto 1fr;
 }
 form.wpcf7-form p:not(:last-of-type) label {
   padding-bottom: 1.5rem;
