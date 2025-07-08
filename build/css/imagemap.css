@@ -7,6 +7,9 @@ div#imageContainer img {
   display: block;
   max-width: 100%;
   border: 1px solid black;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
 }
 div#imageContainer map area {
   cursor: pointer;

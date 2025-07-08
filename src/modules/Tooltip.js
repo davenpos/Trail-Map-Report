@@ -30,7 +30,7 @@ export default class Tooltip {
 
   tooltipAppear(e, area) {
     const alt = $(area).attr("alt")
-    const slug = slugify(alt, { lower: true, remove: /"/g })
+    const slug = slugify(alt, { lower: true, remove: /'/g })
     const status = this.trailInfo === "" ? "Not Set" : this.trailInfo[slug][0]
     this.tooltip.html(`
       ${alt}<br />

@@ -171,7 +171,7 @@ class Tooltip {
     const alt = jquery__WEBPACK_IMPORTED_MODULE_0___default()(area).attr("alt");
     const slug = slugify__WEBPACK_IMPORTED_MODULE_1___default()(alt, {
       lower: true,
-      remove: /"/g
+      remove: /'/g
     });
     const status = this.trailInfo === "" ? "Not Set" : this.trailInfo[slug][0];
     this.tooltip.html(`

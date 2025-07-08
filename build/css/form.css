@@ -2,9 +2,6 @@ form.wpcf7-form {
   background-color: rgb(9, 60, 111);
   padding: 1rem;
   color: white;
-  border-radius: 10px;
-  -webkit-border-radius: 10px;
-  -moz-border-radius: 10px;
   max-width: 50%;
   margin: 0 auto 8px;
   transition-duration: 0.3s;
@@ -12,6 +9,9 @@ form.wpcf7-form {
   position: relative;
   opacity: 0.8;
   border: 2px solid black;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
 }
 form.wpcf7-form:hover {
   box-shadow: 3px 3px 6px rgb(64, 64, 64);
@@ -37,7 +37,7 @@ form.wpcf7-form input.wpcf7-submit:hover {
 }
 form.wpcf7-form select,
 form.wpcf7-form input {
-  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+  font-family: Tahoma, sans-serif;
   font-size: 1rem;
 }
 form.wpcf7-form p {

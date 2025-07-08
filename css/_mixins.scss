@@ -1,3 +1,6 @@
 @mixin black-border($size) {
   border: $size solid black;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
 }
