@@ -7,8 +7,8 @@ while (have_posts()):
   </div>
   <?php if (is_page(18)): ?>
     <div id="imageContainer">
-      <img src="<?php echo wp_get_attachment_image_src(6, 'medium_large')[0]; ?>"
-        alt="<?php echo get_post_meta(6, '_wp_attachment_image_alt', true); ?>" usemap="#trail-map" />
+      <img src="<?php echo wp_get_attachment_image_src(6, "medium_large")[0]; ?>"
+        alt="<?php echo get_post_meta(6, "_wp_attachment_image_alt", true); ?>" usemap="#trail-map" />
       <map name="trail-map">
         <area alt="Rock Island Run"
           coords="240,444,213,453,182,411,135,367,121,342,123,326,148,285,153,277,208,255,211,271,183,293,167,311,155,332,151,350,162,363,193,385,203,395"

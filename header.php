@@ -2,7 +2,7 @@
 <html <?php language_attributes(); ?>>
 
 <head>
-  <meta charset="<?php bloginfo('charset'); ?>">
+  <meta charset="<?php bloginfo("charset"); ?>">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <?php wp_head(); ?>
 </head>
@@ -11,8 +11,8 @@
   <div id="siteWrapper">
     <nav>
       <?php $pagesList = wp_list_pages(array(
-        'title_li' => null,
-        'echo' => false
+        "title_li" => null,
+        "echo" => false
       ));
 
       $pagesArray = explode("</li>", $pagesList);

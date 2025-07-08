@@ -1,6 +1,6 @@
-import $ from 'jquery'
-import slugify from 'slugify'
-import 'image-map-resizer'
+import $ from "jquery"
+import slugify from "slugify"
+import "image-map-resizer"
 
 export default class Tooltip {
   constructor() {
@@ -25,12 +25,12 @@ export default class Tooltip {
     })
 
     this.addTooltipHTML()
-    $('map').imageMapResize()
+    $("map").imageMapResize()
   }
 
   tooltipAppear(e, area) {
-    const alt = $(area).attr('alt')
-    const slug = slugify(alt, { lower: true, remove: /'/g })
+    const alt = $(area).attr("alt")
+    const slug = slugify(alt, { lower: true, remove: /"/g })
     const status = this.trailInfo === "" ? "Not Set" : this.trailInfo[slug][0]
     this.tooltip.html(`
       ${alt}<br />
@@ -59,6 +59,6 @@ export default class Tooltip {
 
   addTooltipHTML() {
     $(document.body).append('<div id="tooltip"></div>')
-    this.tooltip = $('#tooltip')
+    this.tooltip = $("#tooltip")
   }
 }
