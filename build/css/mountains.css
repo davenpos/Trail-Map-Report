@@ -1,11 +1,11 @@
-body.page-id-8, body.page-id-8 div#siteWrapper {
+body.home, body.home div#siteWrapper {
   overflow-y: hidden;
 }
-body.page-id-8 div#siteWrapper {
+body.home div#siteWrapper {
   position: relative;
   min-height: 100dvh;
 }
-body.page-id-8.admin-bar div#siteWrapper {
+body.home.admin-bar div#siteWrapper {
   min-height: calc(100dvh - 32px);
 }
 

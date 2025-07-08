@@ -1,4 +1,4 @@
-body.page-id-18 {
+body:not(.home) {
   margin-bottom: 8px;
 }
 

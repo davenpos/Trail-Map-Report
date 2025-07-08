@@ -5,7 +5,7 @@ while (have_posts()):
   <div id="postContent">
     <?php the_content(); ?>
   </div>
-  <?php if (is_page(18)): ?>
+  <?php if (!is_front_page()): ?>
     <div id="imageContainer">
       <img src="<?php echo wp_get_attachment_image_src(6, "medium_large")[0]; ?>"
         alt="<?php echo get_post_meta(6, "_wp_attachment_image_alt", true); ?>" usemap="#trail-map" />

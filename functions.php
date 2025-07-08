@@ -5,12 +5,11 @@ add_action("wp_enqueue_scripts", function () {
   wp_localize_script("main-js", "siteData", array(
     "trailData" => get_option("latest_report_data")
   ));
-  if (is_page(8)) {
+  if (is_front_page()) {
     wp_enqueue_style("form-css", get_theme_file_uri("/build/css/form.css"), [], filemtime(get_theme_file_path("/build/css/form.css")));
     wp_enqueue_style("mountains-css", get_theme_file_uri("/build/css/mountains.css"), [], filemtime(get_theme_file_path("/build/css/mountains.css")));
     wp_enqueue_style("cloud-css", get_theme_file_uri("/build/css/cloud.css"), [], filemtime(get_theme_file_path("/build/css/cloud.css")));
-  }
-  if (is_page(18)) {
+  } else {
     wp_enqueue_style("image-map-css", get_theme_file_uri("/build/css/imagemap.css"), [], filemtime(get_theme_file_path("/build/css/imagemap.css")));
   }
 });
