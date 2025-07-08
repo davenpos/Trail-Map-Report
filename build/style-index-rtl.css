@@ -21,6 +21,7 @@ p {
   font-size: 1.25rem;
 }
 
+nav,
 main {
   position: relative;
   z-index: 3;
@@ -44,8 +45,6 @@ nav {
   width: -moz-fit-content;
   width: fit-content;
   cursor: default;
-  z-index: 3;
-  position: relative;
   font-family: "Snowburst One", system-ui;
   font-size: 1.5rem;
 }
@@ -219,6 +218,10 @@ nav li a {
   body,
   body.page-id-8 div#siteWrapper {
     min-height: calc(100dvh - 46px);
+    margin: 0;
+  }
+  main {
+    margin: 0 8px;
   }
   h1 {
     font-size: 2rem;

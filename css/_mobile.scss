@@ -3,6 +3,11 @@
   body,
   body.page-id-8 div#siteWrapper {
     min-height: calc(100dvh - 46px);
+    margin: 0;
+  }
+
+  main {
+    margin: 0 8px;
   }
 
   h1 {
