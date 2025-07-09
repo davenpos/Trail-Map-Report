@@ -18,7 +18,7 @@ The task was to set up a clean WordPress installation, create a form with a drop
 ## Files and folders
 My WordPress theme contains 9 files at the root of the theme as well as four subfolders (or five if you're working locally).
 ### Root files
-- **.gitignore**: Contains just one line--"node_modules/". I do not want the node_modules folder pushed up to GitHub as it is huge and only necessary when working with the theme locally.
+- **.gitignore**: Contains just one line--"node_modules/". I do not want the `node_modules` folder pushed up to GitHub as it is huge and only necessary when working with the theme locally.
 - **footer.php**: Contains the HTML and PHP code that appears at the bottom of my site.
 - **functions.php**: Contains a few PHP functions that do actions such as adding the CSS and JavaScript to the website, adding a title tag to the pages and saving the submitted form data into the WordPress database.
 - **header.php**: Contains the HTML and PHP code that appears at the top of my site.
