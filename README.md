@@ -13,7 +13,7 @@
 ## Overview
 This is the code for Trail Map Report--a custom WordPress theme I created as part of a task for a job application at IDL Web Inc.
 
-The task was to set up a clean WordPress installation, create a form with a dropdown for five trails from the trail map, each containing "Open" and "Closed" and a page with a trail map containing an image map zone. When you hover over one of the five trails on the map (or tap on mobile), a popup appears that displays the name of the trail as well as either "Open" or "Closed" based on the most recent form submission. Although the task didn't require a custom theme, I felt like it would help showcase my WordPress technical skills if I did so. The site, live at [trailmapreport.simeondavenport.com](https://trailmapreport.simeondavenport.com/), is deployed using AWS EC2 with a MariaDB database and an Apache server.
+The task was to set up a clean WordPress installation, create a form with a dropdown for five trails from a trail map, each containing "Open" and "Closed" and a page with the trail map containing an image map zone. When you hover over one of the five trails on the map (or tap on mobile), a popup appears that displays the name of the trail as well as either "Open" or "Closed" based on the most recent form submission. Although the task didn't require a custom theme, I felt like it would help showcase my WordPress technical skills if I built one. The site, live at [trailmapreport.simeondavenport.com](https://trailmapreport.simeondavenport.com/), is deployed using AWS EC2 with a MariaDB database and an Apache server.
 
 ## Files and folders
 My WordPress theme contains 9 files at the root of the theme as well as four subfolders (or five if you're working locally).
@@ -28,7 +28,7 @@ My WordPress theme contains 9 files at the root of the theme as well as four sub
 - **screenshot.png**: A screenshot containing what the front end of my site looks like, which is previewed when the theme is uploaded to WordPress.
 - **style.css**: A file containing information about my theme, such as the author (me), the theme name, a description, etc.
 ### Subfolders
-- **build**: All my compiled JavaScript and SCSS outputs to this folder via the `wp-scripts dev` or `wp-scripts build` command. Some SCSS scripts compile separate from the main style.scss file due to only being used on one page, eliminating unnecessary CSS imports on pages where they are not needed.
+- **build**: All my compiled JavaScript and SCSS outputs to this folder via the `wp-scripts dev` or `wp-scripts build` command. Some SCSS scripts compile separate from the main `style.scss` file due to only being used on one page, eliminating unnecessary CSS imports on pages where they are not needed.
 - **css**: Contains all of my SCSS files. I chose to use SCSS instead of vanilla CSS to keep my CSS stylings DRY. The files for the font Wonderia, which I used on the site, also live here.
 - **images**: Contains the trail map image used on the site.
 - **node_modules**: This folder only exists in local development. When migrating up to AWS (or anywhere else online), this folder is not necessary. It contains all the external libraries and dependencies my theme relies on to function.
@@ -72,7 +72,7 @@ Here are the steps to using my theme and setting up the site like I have it.
 11. Once the ZIP file is downloaded, extract it. This should create a brand new folder called "Trail-Map-Report-master".
 12. Add the theme folder to your WordPress site and activate it.
     - If you are using WordPress locally on your own machine, move the "Trail-Map-Report-master" folder into your `wp-content/themes` folder. Then in the admin dashboard, hover over "Appearances", select "Themes" and activate the new theme.
-    - If you are using an online deployed WordPress instance, go inside the `Trail-Map-Report-master` folder, select all files inside and send them to another ZIP folder. Then, on the "Appearance" tab on the WordPress admin dashboard, select "Themes", then click "Add Theme", "Upload Theme" and upload this new ZIP file you have created. If it is not automatically activated once it is done uploading, activate it.
+    - If you are using an online deployed WordPress instance, go inside the `Trail-Map-Report-master` folder, select all files inside and send them to another ZIP folder. Then, on the "Appearance" tab on the WordPress admin dashboard, select "Themes", then click "Add Theme", then "Upload Theme" and upload this new ZIP file you have created. If it is not automatically activated once it is done uploading, activate it.
 13. If you are using an online deployed WordPress instance instead of a local WordPress instance on your own machine, ignore this final step. Otherwise, open up a terminal, have it point to the newly-added theme folder, type in "npm install", press enter and wait for the command to finish.
 
 Once you finish all of these steps, you now have the Trail Map Report theme working on your WordPress site! You can now view the front end and test out the report form and the image map on the report page.
